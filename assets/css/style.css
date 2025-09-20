@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    /* background: #D2691E; */
+    background-image: url("../../philip-oroni-uW6N7dj9HjM-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+html {
+  scroll-behavior: smooth; /* biar scroll halus */
+}
+section {
+  min-height: 100vh;
+  padding: 5rem 1.25rem;
+}
+
+
+.headerr{
+    position: fixed;
+    /* color: brown; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem 10%;
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.navigation {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.navigation a {
+    font-size: 1.25rem;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: .10s;
+}
+
+.navigation a:hover, 
+.navigation a.activate {
+
+    color: white;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.25rem;
+}
+
+.homecontent{
+    max-width: min(90%, 600px);
+    margin-left: 40px;
+    margin: 40px;
+}
+
+.homecontent h1{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #081b29;
+    margin: 15px;
+
+}
+
+.homecontent h3{
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: wheat;
+    margin: 15px;
+
+}
+
+.homecontent p{
+    margin-left: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #081b29;
+}
+
