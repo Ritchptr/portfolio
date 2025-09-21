@@ -85,16 +85,15 @@ section {
     align-items: center;
     justify-content: flex-start;
     padding: 1.25rem;
+    gap: 5rem;
 }
 
 .homecontent{
     max-width: min(90%, 600px);
     /* margin-left: 40px; */
-    margin: 40px;
+    flex: 1 1 500px;
+    margin: 0;
 }
-/* .hello{
-    margin-bottom: 0;
-} */
 
 .homecontent h1{
     font-size: clamp(5rem, 5vw, 3.5rem);
@@ -119,6 +118,21 @@ section {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--second-text-color);
+}
+
+.home-image {
+    flex: 0 0 500px; /* kolom gambar tetap */
+    width: 50%; /* persen agar responsive */
+    max-width: 500px; /* ukuran maksimum agar tidak terlalu besar */
+    margin-left: 20rem; /* dorong ke kanan */
+}
+
+.home-image img {
+    
+    width: 100%; /* menyesuaikan container .home-image */
+    height: auto; /* tetap proporsional */
+    /* border-radius: 1rem; opsional biar lebih rapi */
+    display: block; /* hilangkan gap bawah default inline image */
 }
 
 .sosmed a{
