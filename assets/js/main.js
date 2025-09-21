@@ -25,6 +25,7 @@ async function loadSection(id, file) {
 }
 
 // Load konten eksternal ke section
+loadSection("about", "./about.html");
 loadSection("skills", "./skills.html");
 loadSection("experiences", "./experiences.html");
 loadSection("projects", "./projects.html");

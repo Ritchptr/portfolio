@@ -4,7 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --text-color: wheat;
+    --second-text-color: #DCDCDC;
+}
+
+html {
+    font-size: 70.5%;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth; biar scroll halus */
 }
 
 body {
@@ -13,14 +27,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: var(--text-color);
 }
 
-html {
-  scroll-behavior: smooth; /* biar scroll halus */
-}
+
 section {
   min-height: 100vh;
-  padding: 5rem 1.25rem;
+  padding: 10rem 10% 2rem;
 }
 
 
@@ -45,8 +58,8 @@ section {
 }
 
 .navigation a {
-    font-size: 1.25rem;
-    color: #081b29;
+    font-size: 1.7rem;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
@@ -56,12 +69,19 @@ section {
 .navigation a:hover, 
 .navigation a.activate {
 
-    color: white;
+    color: blue;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
 }
 
 .home{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     padding: 1.25rem;
@@ -69,20 +89,25 @@ section {
 
 .homecontent{
     max-width: min(90%, 600px);
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin: 40px;
 }
+/* .hello{
+    margin-bottom: 0;
+} */
 
 .homecontent h1{
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(5rem, 5vw, 3.5rem);
     font-weight: 700;
-    color: #081b29;
-    margin: 15px;
+    color: var(--second-text-color);
+    /* margin: 15px; */
+    padding-left: 0.5rem;
+    
 
 }
 
 .homecontent h3{
-    font-size: 1.875rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: wheat;
     margin: 15px;
@@ -91,8 +116,99 @@ section {
 
 .homecontent p{
     margin-left: 20px;
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #081b29;
+    color: var(--second-text-color);
 }
 
+.sosmed a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: .4rem solid blanchedalmond;
+    border-radius: 30%;
+    font-size: 5rem;
+    color: var(--second-text-color);
+    margin: 3rem 1.5rem 3rem;
+    transition: .5s ease;
+}
+
+.sosmed :hover{
+    background: transparent;
+    color: var(--second-text-color);
+    box-shadow: 0 0 2rem #FFFAFA;
+}
+
+.botton{
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #191970;
+    border: .4rem solid blanchedalmond;
+    border-radius: 4rem;
+    font-size: 2rem;
+    color: var(--second-text-color);
+    letter-spacing: .1rem;
+    font-weight: 800;
+    transition: .5s ease;
+
+}
+
+.botton:hover{
+    background: transparent;
+    color: var(--second-text-color);
+    box-shadow: 0 0 2rem #FFFAFA;
+}
+
+.about-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem; /* jarak antara gambar dan teks */
+    padding: 4rem 10%;
+}
+
+.about-image, .about-content{
+    flex: 1 1 45%; /* fleksibel, min 45% lebar tiap kolom */
+    max-width: 500px;
+}
+
+.about-image img{
+    /* max-width: 400px; 
+    width: 100%;
+    border-radius: 1rem; /* opsional, biar lebih rapi */
+    max-width: 1200px; /* batas maksimum lebar section */
+    margin: 0 auto; 
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: left; */
+    gap: 2rem;
+    text-align: left;
+    background: fixed;
+}
+
+.headingA{
+    text-align: left;
+    line-height: 1.2;
+    font-size: 5rem;
+    color: var(--text-color);
+}
+
+.about-content h3{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 2rem;
+    background: fixed;
+}
+
+.about-content p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--second-text-color);
+}
