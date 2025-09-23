@@ -32,8 +32,12 @@ body {
 
 
 section {
-  min-height: 100vh;
-  padding: 10rem 10% 2rem;
+    min-height: 100vh;
+  /* padding: 10rem 10% 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 
@@ -79,28 +83,26 @@ section {
 }
 
 .home{
-    /* height: 100vh; */
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    padding: 1.25rem;
-    gap: 5rem;
+    justify-content: flex-start; */
+    padding: 5% 10%;
+    gap: 5%;
 }
 
 .homecontent{
     max-width: min(90%, 600px);
-    /* margin-left: 40px; */
-    flex: 1 1 500px;
-    margin: 0;
+    flex: 1 1 60%;
+    background: #f00008;
 }
 
 .homecontent h1{
     font-size: clamp(5rem, 5vw, 3.5rem);
     font-weight: 700;
     color: var(--second-text-color);
-    /* margin: 15px; */
-    padding-left: 0.5rem;
+    margin: 15px;
+    /* margin-left: 0.5rem; */
     
 
 }
@@ -121,17 +123,17 @@ section {
 }
 
 .home-image {
-    flex: 0 0 500px; /* kolom gambar tetap */
-    width: 50%; /* persen agar responsive */
-    max-width: 500px; /* ukuran maksimum agar tidak terlalu besar */
-    margin-left: 20rem; /* dorong ke kanan */
+    flex: 1 1 45%;
+    max-width: 500px;
+    margin: 0 5% 0 10%;
+    margin-bottom: 6.5%;
+    background: blueviolet;
 }
 
 .home-image img {
     
-    width: 100%; /* menyesuaikan container .home-image */
-    height: auto; /* tetap proporsional */
-    /* border-radius: 1rem; opsional biar lebih rapi */
+    width: 100%; 
+    height: auto; 
     display: block; /* hilangkan gap bawah default inline image */
 }
 
@@ -144,7 +146,7 @@ section {
     border-radius: 30%;
     font-size: 5rem;
     color: var(--second-text-color);
-    margin: 3rem 1.5rem 3rem;
+    margin: 3rem 1.5rem;
     transition: .5s ease;
 }
 
@@ -165,6 +167,7 @@ section {
     letter-spacing: .1rem;
     font-weight: 800;
     transition: .5s ease;
+    margin: 1rem 1.5rem ;
 
 }
 
@@ -175,54 +178,170 @@ section {
 }
 
 .about-section{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 5rem; /* jarak antara gambar dan teks */
-    padding: 4rem 10%;
+    justify-content: flex-start; */
+    gap: 5%; 
+    padding: 5% 10%;
 }
 
-.about-image, .about-content{
+.about-image{
+    order: 2;
     flex: 1 1 45%; /* fleksibel, min 45% lebar tiap kolom */
     max-width: 500px;
+    background: blueviolet;
 }
 
 .about-image img{
-    /* max-width: 400px; 
     width: 100%;
-    border-radius: 1rem; /* opsional, biar lebih rapi */
-    max-width: 1200px; /* batas maksimum lebar section */
-    margin: 0 auto; 
+    height: auto;
+    display: block;
 }
 
 .about-content{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: left; */
-    gap: 2rem;
-    text-align: left;
-    background: fixed;
+    order: 1;
+    max-width: min(90%, 600px);
+    flex: 1 1 60%;
+    font-weight: 700;
+    margin: 0 3% 0 6%;
+    background: #f00008;
 }
 
+
 .headingA{
-    text-align: left;
-    line-height: 1.2;
     font-size: 5rem;
     color: var(--text-color);
 }
 
 .about-content h3{
-    display: flex;
-    justify-content: left;
-    align-items: left;
     font-size: 2rem;
-    background: fixed;
+    color: var(--second-text-color);
+    margin-bottom: 2%;
 }
 
 .about-content p{
     font-size: 2rem;
-    font-weight: 700;
     color: var(--second-text-color);
+}
+
+.skills-section{
+    gap: 5%; 
+    padding: 5% 10%;
+    font-weight: 700;
+    /* align-items: center; */
+}
+
+.head-skill{
+    background: #f00008;
+    text-align: center;
+    align-items: center;
+    margin: 0 0 1% 45%;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.softskil, .hardskil, .tools{
+    max-width: min(90%, 600px);
+    margin: 2% 0;
+    flex: 1 1 60%;
+    font-size: 3rem;
+    background: #f00008;
+}
+
+.softskil{
+    margin-left: 6.5%;
+
+}
+
+.softskil h2, .hardskil h2, .tools h2{
+    color: var(--text-color);
+    /* font-size: 3.5rem; */
+    text-align: center;
+
+}
+
+.softskil p, .hardskil p{
+    color: var(--second-text-color);
+    /* font-size: 3.5rem; */
+    text-align: center;
+
+}
+
+.tools{
+    margin-left: 30%;
+}
+
+.tools p{
+    background: black;
+    color: var(--second-text-color);
+    display: inline-flex;
+    margin: 2% 1%;
+    justify-content: center;
+    text-align: left;
+    border: .4rem solid darkcyan;
+    border-radius: 10%;
+}
+
+.experiences-section, .projects-section{
+    padding: 5% 10%;
+    gap: 5%;
+}
+
+.head-exp{
+    background: #f00008;
+    text-align: center;
+    align-items: center;
+    margin: 0 0 3% 35%;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.experience-item {
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5% 2% 1.5%; 
+}
+
+.experience-item img {
+
+    flex: 1 1 25%;      
+    max-width: 400px;   
+    height: auto;
+    border-radius: 0.5rem; 
+}
+.exp-text {
+    flex: 1;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.head-pro{
+    background: #f00008;
+    text-align: center;
+    align-items: center;
+    margin: 0 10% 3% 42%;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.project-item {
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5% 2% 1.5%; 
+}
+
+.project-item img {
+
+    flex: 1 1 25%;      
+    max-width: 400px;   
+    height: auto;
+    border-radius: 0.5rem; 
+}
+.pro-text {
+    flex: 1;
+    text-align: center;
+    font-size: 3rem;
 }
