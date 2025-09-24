@@ -18,11 +18,9 @@
 html {
     font-size: 70.5%;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; biar scroll halus */
 }
 
 body {
-    /* background: #D2691E; */
     background-image: url("../../philip-oroni-uW6N7dj9HjM-unsplash.jpg");
     background-size: cover;
     background-position: center;
@@ -33,7 +31,6 @@ body {
 
 section {
     min-height: 100vh;
-  /* padding: 10rem 10% 2rem; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -43,7 +40,6 @@ section {
 
 .headerr{
     position: fixed;
-    /* color: brown; */
     top: 0;
     left: 0;
     width: 100%;
@@ -83,10 +79,7 @@ section {
 }
 
 .home{
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start; */
+    background: #081b29;
     padding: 5% 10%;
     gap: 5%;
 }
@@ -94,7 +87,7 @@ section {
 .homecontent{
     max-width: min(90%, 600px);
     flex: 1 1 60%;
-    background: #f00008;
+    /* background: #f00008; */
 }
 
 .homecontent h1{
@@ -102,7 +95,6 @@ section {
     font-weight: 700;
     color: var(--second-text-color);
     margin: 15px;
-    /* margin-left: 0.5rem; */
     
 
 }
@@ -110,7 +102,7 @@ section {
 .homecontent h3{
     font-size: 3.2rem;
     font-weight: 700;
-    color: wheat;
+    color: rgb(44, 179, 172);
     margin: 15px;
 
 }
@@ -126,15 +118,17 @@ section {
     flex: 1 1 45%;
     max-width: 500px;
     margin: 0 5% 0 10%;
-    margin-bottom: 6.5%;
-    background: blueviolet;
+    /* background: blueviolet; */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20%;
+    box-shadow: 0 0 40px 20px #041a4d;
 }
 
 .home-image img {
     
     width: 100%; 
     height: auto; 
-    display: block; /* hilangkan gap bawah default inline image */
+    display: block;
 }
 
 .sosmed a{
@@ -178,25 +172,26 @@ section {
 }
 
 .about-section{
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start; */
     gap: 5%; 
     padding: 5% 10%;
+    background: #081b2986;
+    background: linear-gradient(to bottom, #081b29, #1f2a8b10);
+
 }
 
 .about-image{
     order: 2;
-    flex: 1 1 45%; /* fleksibel, min 45% lebar tiap kolom */
+    flex: 1 1 45%; 
     max-width: 500px;
-    background: blueviolet;
+    /* background: blueviolet; */
 }
 
 .about-image img{
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 20%;
+    box-shadow: 0 0 40px 20px #031641;
 }
 
 .about-content{
@@ -204,25 +199,33 @@ section {
     max-width: min(90%, 600px);
     flex: 1 1 60%;
     font-weight: 700;
-    margin: 0 3% 0 6%;
-    background: #f00008;
+    margin: 0 3% 10% 6%;
+    /* background: #f00008; */
 }
 
 
-.headingA{
+.about-content h2{
     font-size: 5rem;
     color: var(--text-color);
+    padding-bottom: 6px; 
+    margin: 0 0 3% 0;
+    border-bottom: 0.4rem solid #2f2fe0;
+    border-radius: 5%;
+    display: inline-block;
+
 }
 
 .about-content h3{
-    font-size: 2rem;
-    color: var(--second-text-color);
+    font-size: 2.5rem;
+    color: rgb(44, 179, 172);
     margin-bottom: 2%;
 }
 
 .about-content p{
     font-size: 2rem;
     color: var(--second-text-color);
+    text-align: justify;
+    text-indent: 2em;
 }
 
 .skills-section{
@@ -233,12 +236,15 @@ section {
 }
 
 .head-skill{
-    background: #f00008;
+    /* background: #f00008; */
     text-align: center;
     align-items: center;
     margin: 0 0 1% 45%;
     font-size: 2.5rem;
     font-weight: 800;
+    border-bottom: 0.4rem solid #2f2fe0;
+    border-radius: 5%;
+    display: inline-block;
 }
 
 .softskil, .hardskil, .tools{
@@ -246,11 +252,14 @@ section {
     margin: 2% 0;
     flex: 1 1 60%;
     font-size: 3rem;
-    background: #f00008;
+    box-shadow: 0 0 40px 20px #030d24;
+    display: inline-block;
+    border-radius: 10%;
+    /* background: #f00008; */
 }
 
 .softskil{
-    margin-left: 6.5%;
+    margin: 0 6% 2% 8%;
 
 }
 
@@ -258,14 +267,25 @@ section {
     color: var(--text-color);
     /* font-size: 3.5rem; */
     text-align: center;
+    border-bottom: 0.4rem solid #2f2fe0;
+    border-radius: 5%;
+    display: inline-block;
 
 }
 
 .softskil p, .hardskil p{
     color: var(--second-text-color);
     /* font-size: 3.5rem; */
-    text-align: center;
+    text-align: justify;
 
+}
+
+hardskil p{
+    margin: 0 0 5% 0;
+}
+
+.softskil p{
+    margin: 0 0 5% 0;
 }
 
 .tools{
@@ -273,33 +293,38 @@ section {
 }
 
 .tools p{
-    background: black;
+    background: rgb(2, 23, 37);
     color: var(--second-text-color);
-    display: inline-flex;
-    margin: 2% 1%;
+    display: inline-block;
+    margin: 2% 3.2%;
     justify-content: center;
-    text-align: left;
-    border: .4rem solid darkcyan;
+    text-align: justify;
+    border: .4rem solid rgb(10, 48, 117);
     border-radius: 10%;
 }
 
 .experiences-section, .projects-section{
     padding: 5% 10%;
+    /* max-width: 400px; */
     gap: 5%;
 }
 
 .head-exp{
-    background: #f00008;
+    /* background: #f00008; */
     text-align: center;
     align-items: center;
-    margin: 0 0 3% 35%;
+    margin: 0 3% 3% 35%;
     font-size: 2.5rem;
     font-weight: 800;
+    border-bottom: 0.4rem solid #2f2fe0;
+    border-radius: 5%;
+    display: inline-block;
 }
 
 .experience-item {
-    background: blueviolet;
+    /* background: blueviolet; */
     display: flex;
+    max-width: 400px;
     flex-direction: column;
     margin: 0 1.5% 2% 1.5%; 
 }
@@ -309,7 +334,14 @@ section {
     flex: 1 1 25%;      
     max-width: 400px;   
     height: auto;
-    border-radius: 0.5rem; 
+    /* border-radius: 0.5rem; */
+    display: block;
+    border-radius: 20%;
+    box-shadow: 0 0 40px 20px #374d86; 
+}
+
+.inter{
+    background-color: rgba(0, 0, 0, 0.7) ;
 }
 .exp-text {
     flex: 1;
@@ -318,16 +350,19 @@ section {
 }
 
 .head-pro{
-    background: #f00008;
+    /* background: #f00008; */
     text-align: center;
     align-items: center;
     margin: 0 10% 3% 42%;
     font-size: 2.5rem;
     font-weight: 800;
+    border-bottom: 0.4rem solid #2f2fe0;
+    border-radius: 5%;
+    display: inline-block;
 }
 
 .project-item {
-    background: blueviolet;
+    /* background: blueviolet; */
     display: flex;
     flex-direction: column;
     margin: 0 1.5% 2% 1.5%; 
@@ -338,7 +373,10 @@ section {
     flex: 1 1 25%;      
     max-width: 400px;   
     height: auto;
-    border-radius: 0.5rem; 
+    border-radius: 0.5rem;
+    display: block;
+    border-radius: 20%;
+    box-shadow: 0 0 40px 20px #031641; 
 }
 .pro-text {
     flex: 1;
