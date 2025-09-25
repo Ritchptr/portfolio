@@ -29,3 +29,10 @@ loadSection("about", "./about.html");
 loadSection("skills", "./skills.html");
 loadSection("experiences", "./experiences.html");
 loadSection("projects", "./projects.html");
+
+let menuIcon = document.querySelector('#menu-icon');
+let nav = document.querySelector('.navigation');
+
+menuIcon.onclick = () => {
+  nav.classList.toggle('active');
+};

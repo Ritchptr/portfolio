@@ -51,6 +51,19 @@ section {
 
 }
 
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #2f2fe0; /* efek hover */
+}
+
 .navigation {
     display: flex;
     margin-left: auto;
@@ -116,7 +129,7 @@ section {
 
 .home-image {
     flex: 1 1 45%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 5% 0 10%;
     /* background: blueviolet; */
     background-color: rgba(0, 0, 0, 0.2);
@@ -303,17 +316,22 @@ hardskil p{
     border-radius: 10%;
 }
 
-.experiences-section, .projects-section{
+.experiences-section {
+    display: flex;
+    flex-direction: column; /* agar item menurun */
+    align-items: center; /* item tetap rata tengah */
+    gap: 5%;
     padding: 5% 10%;
     /* max-width: 400px; */
-    gap: 5%;
+
 }
+
 
 .head-exp{
     /* background: #f00008; */
     text-align: center;
     align-items: center;
-    margin: 0 3% 3% 35%;
+    margin: 0 3% 5% 3%;
     font-size: 2.5rem;
     font-weight: 800;
     border-bottom: 0.4rem solid #2f2fe0;
@@ -324,35 +342,71 @@ hardskil p{
 .experience-item {
     /* background: blueviolet; */
     display: flex;
-    max-width: 400px;
-    flex-direction: column;
-    margin: 0 1.5% 2% 1.5%; 
+    justify-content: center;
+    gap: 5%;
+    margin: 0 1.5% 5% 1.5%; 
+}
+
+.experience-item:nth-child(even){
+    flex-direction: row;
+    text-align: left;
+
+}
+
+.experience-item:nth-child(odd){
+    flex-direction: row-reverse;
+    text-align: center;
+    /* justify-content: center; */
+
 }
 
 .experience-item img {
 
-    flex: 1 1 25%;      
-    max-width: 400px;   
+    flex: 1 1 20px;      
+    max-width: 400px;
     height: auto;
-    /* border-radius: 0.5rem; */
+    border-radius: 0.5rem;
     display: block;
     border-radius: 20%;
-    box-shadow: 0 0 40px 20px #374d86; 
+    box-shadow: 0 0 40px 20px #374d86;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.experience-item img:hover{
+    transform: scale(1.15);      
+    filter: brightness(1.1);
+    box-shadow: 0 0 50px 25px #4a6eff;
 }
 
 .inter{
     background-color: rgba(0, 0, 0, 0.7) ;
 }
 .exp-text {
+    margin: 3% 0 0 0;
     flex: 1;
-    text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: var(--second-text-color);
 }
 
+.exp-text h2 {
+    margin: 0 0 3% 0;
+    color: var(--text-color);
+}
+
+.exp-text p{
+    text-indent: 10%;
+}
+
+.projects-section{
+    padding: 5% 10%;
+    gap: 5%;
+    align-items: flex-start;
+
+}
 .head-pro{
     /* background: #f00008; */
     text-align: center;
-    align-items: center;
     margin: 0 10% 3% 42%;
     font-size: 2.5rem;
     font-weight: 800;
@@ -365,21 +419,232 @@ hardskil p{
     /* background: blueviolet; */
     display: flex;
     flex-direction: column;
-    margin: 0 1.5% 2% 1.5%; 
+    margin: 0 1.5% 2% 1.5%;
 }
 
 .project-item img {
 
-    flex: 1 1 25%;      
+    flex: 1 1 25%;     
     max-width: 400px;   
     height: auto;
+    margin: 15% 0 15% 0;
     border-radius: 0.5rem;
     display: block;
     border-radius: 20%;
-    box-shadow: 0 0 40px 20px #031641; 
+    box-shadow: 0 0 40px 20px #031641;
+    transition: all 0.3s ease-in-out;
 }
+
+.project-item img:hover{
+    transform: scale(1.15);      
+    filter: brightness(1.1);
+    box-shadow: 0 0 50px 25px #4a6eff;
+}
+
 .pro-text {
-    flex: 1;
+    max-width: 400px;
+    flex: 1 1 25%;     
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+
+
+}
+.pro-text p{
+    color: var(--second-text-color);
+    text-align: center;
+}
+
+.footer {
+  /* background: #031641; */
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer p {
+  font-size: 1.9rem;
+  color: #ffffffcc; /* putih agak transparan */
+  margin: 0;
+}
+
+.footer a {
+  color: #131381;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+
+/* Responsive for HP */
+
+@media (max-width: 480px) {
+
+    .navigation {
+        position: absolute;
+        margin: 5% 5% 0 0;
+        top: 100%;
+        right: -100%; 
+        width: 40%;
+        height: 20vh;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2rem;
+        transition: 0.4s;
+    }
+
+    .navigation.active {
+        right: 0; 
+    }
+
+    #menu-icon {
+        display: block; 
+    }
+
+    section {
+        padding: 2rem 1rem; 
+    }
+
+    h1 { font-size: clamp(1.7rem, 6vw, 2.5rem); }
+    h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+    h3 { font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
+    p  { font-size: clamp(1rem, 4vw, 1.4rem); }
+    .home, .experience-item, .project-item, .softskilm .hardskil, .tools{
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+    }
+    .logo {
+        margin: 5% 60% 0 0;
+        font-size: 1.4rem;
+        left: 0;
+    }
+   .home-image{
+
+        margin-top: 20%;
+        overflow: hidden;
+    }
+
+    .sosmed a{
+        margin-right: 1%;
+    }
+
+    .hardskil{
+        margin: 0 0 0 5%;
+    }
+
+    .tools{
+        margin: 0 5% 0 5%;
+    }
+
+    img {
+        width: 100%;
+        margin: 15% 0 10% 0;
+    }
+
+    .exp-text {
+        text-align: center;
+    }
+
+    .footer{
+        font-size: 0.1rem;
+        padding: 0.5em 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 50%;
+        height: 40vh;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2rem;
+        transition: 0.4s;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.8rem, 4.5vw, 2.5rem); }
+    h3 { font-size: clamp(1.4rem, 4vw, 2rem); }
+    p  { font-size: clamp(1rem, 3.5vw, 1.6rem); }
+
+    .home, .experience-item, .project-item, .softskil, .hardskil, .tools {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        font-size: medium;
+    }
+
+    .logo {
+        margin: 3% 70% 0 0;
+        font-size: 1.6rem;
+        left: 0;
+    }
+
+    .home-image {
+        margin-top: 10%;
+        overflow: hidden;
+    }
+
+    .about-image{
+        margin: 0 0 0 10%;
+    }
+
+    .sosmed a {
+        margin: 2rem;
+    }
+
+    .hardskil {
+        margin: 0 0 0 8%;
+    }
+
+    .tools {
+        margin: 0 0 0 8%;
+    }
+
+    img {
+        width: 90%;
+        margin: 10% 0 5% 0;
+    }
+
+    .exp-text {
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 1em 0;
+    }
+
+    .project-item{
+        margin: 0 0 0 20%;
+    }
+
 }
